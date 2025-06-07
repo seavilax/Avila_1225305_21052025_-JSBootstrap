@@ -15,7 +15,7 @@ document.getElementById("formulario-contacto").addEventListener("submit", functi
     // Validar formato de email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-        alert("Por favor, ingrese un correo electrónico válido.");
+        alert("Por favor, ingrese un correo electrónico válido: ejemplo@gmail.com");
         return;
     }
 
