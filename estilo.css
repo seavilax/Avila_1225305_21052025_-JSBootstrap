@@ -1,21 +1,65 @@
 /* = estilo.css = */
 
+/* Variables de colores */
+:root {
+    --bg-color: #DCE0D9;
+    --text-color: #1F2937;
+    --header-bg: #021C0E;
+    --header-text: white;
+    --main-bg: white;
+    --box-bg: #f7f8fc;
+    --box-border: #DBEAFE;
+}
+
+/* Modo oscuro */
+body.dark-theme {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --header-bg: #000000;
+    --header-text: #ffffff;
+    --main-bg: #2d2d2d;
+    --box-bg: #3d3d3d;
+    --box-border: #4d4d4d;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 2;
-    background-color: #DCE0D9;
-    color: #1F2937;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     position: relative;
     padding-bottom: 3em;
     min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* = Header = */
 #main-header {
-    background-color: #021C0E;
+    background-color: var(--header-bg);
     padding: 1em 0;
+}
+
+/* = Theme Buttons = */
+.theme-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
 }
 
 /* = navs = */
@@ -58,17 +102,19 @@ body {
     padding: 40px;
     max-width: 1000px;
     margin: 80px auto;
-    background-color: white;
+    background-color: var(--main-bg);
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(24, 0, 158, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .main-title {
     margin-top: 0;
     text-align: center;
-    color: #021C0E;
+    color: var(--header-bg);
     font-size: 2rem;
     font-weight: 700;
+    transition: color 0.3s ease;
 }
 
 /* = Tabla de materias  = */
@@ -86,8 +132,8 @@ body {
 }
 
 .subject-table th {
-    background-color: #021C0E;
-    color: white;
+    background-color: var(--header-bg);
+    color: var(--header-text);
     font-weight: 600;
     padding: 12px;
 }
@@ -98,7 +144,7 @@ body {
 }
 
 .subject-table tr:nth-child(even) {
-    background-color: #f7f8fc;
+    background-color: var(--box-bg);
 }
 
 
@@ -183,10 +229,10 @@ img {
 
 /* = cajas de tareas/avisos = */
 .box-tareas {
-    background-color: #f7f8fc;
+    background-color: var(--box-bg);
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #DBEAFE;
+    border: 1px solid var(--box-border);
     overflow: auto;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     margin-bottom: 20px /* altura mínima pequeña */
@@ -197,10 +243,10 @@ img {
 
 /* = cajas de dineño y desarrollo web = */
 .box {
-    background-color: #f7f8fc;
+    background-color: var(--box-bg);
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #DBEAFE;
+    border: 1px solid var(--box-border);
     overflow: auto;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }

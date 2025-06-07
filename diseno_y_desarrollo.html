@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseño y Desarrollo Web</title>
     <link rel="stylesheet" href="estilo.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header id="main-header">
@@ -16,6 +17,10 @@
                 <li class="nav-item"><a href="materias2025.html" class="nav-link">Materias 2025</a></li>
                 <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
             </ul>
+            <div class="theme-buttons">
+                <button id="lightMode" class="theme-btn">☀️</button>
+                <button id="darkMode" class="theme-btn">🌙</button>
+            </div>
         </nav>
     </header>
 
@@ -100,5 +105,7 @@
     <footer id="main-footer">
         <p>Curso: Virtual / Profesora: Patricia Litovicius</p>
     </footer>
+
+    <script src="theme.js"></script>
 </body>
 </html>
