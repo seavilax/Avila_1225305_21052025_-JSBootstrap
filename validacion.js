@@ -6,7 +6,7 @@ document.getElementById("formulario-contacto").addEventListener("submit", functi
     const asunto = document.getElementById("asunto").value.trim();
     const mensaje = document.getElementById("mensaje").value.trim();
 
-    // Validación 
+    // Validacion 
     if (!nombre || !email || !asunto || !mensaje) {
         alert("Por favor, complete todos los campos del formulario.");
         return;
